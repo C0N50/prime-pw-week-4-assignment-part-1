@@ -87,9 +87,32 @@ console.log('Test getLast should say undefined -', getLast(noName));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+
 function find( value, array ){
-  
-}
+  if(array.length > 0) {
+    for (let index of array) {
+      //console.log('index is', index);
+      if (index == value) {
+        return true; //return true if value is found.
+      }
+    } //end for of
+    return false; //return false if no values found.
+  } //end if get last
+  else {
+  return false; //return false if array is empty
+  } //end else if getLast Fails
+} //end find
+
+//test cases
+console.log('Test find Connor find should say true -', find('Connor', firstName));
+console.log('Test find Connor find should say true -', find('Connor', names));
+console.log('Test find Consolino find should say true -', find('Consolino', names));
+console.log('Test find Ferris  find should say true -', find ('Ferris', names));
+console.log('Test find Connor find should say false -', find('Connor', noName));
+console.log('Test find Hank find should say false -', find('Hank', firstName));
+console.log('Test find Hank find should say false -', find('Hank', names));
+console.log('Test find Hank find should say false -', find('Hank', noName));
+console.log('Test find Marty find should say false -', find('Marty', names));
 
 // ----------------------
 // Stretch Goals
