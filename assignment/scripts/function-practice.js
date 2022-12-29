@@ -65,9 +65,24 @@ console.log( 'isPositive - should say true', isPositive(.005));
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
-  
+  if(array.length > 0) {
+    return array[array.length - 1];
+  }
+  else {
+   return undefined;
+  }
+} //end getLast
 
-}
+//getLast Test cases
+let firstName = ['Connor'];
+let names = ['Connor', 'Consolino', 'Ferris',]
+let noName = [];
+
+console.log('Test getLast should say Connor -', getLast(firstName));
+console.log('Test getLast should say Ferris -',  getLast(names));
+console.log('Test getLast should say undefined -', getLast(noName));
+
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
