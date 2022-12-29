@@ -36,8 +36,9 @@ console.log('Test - addNumbers 35 + -90 =', addNumbers(35,-90));
 function multiplyThree(firstNumber, secondNumber, thirdNumber){
 let fourthNumber = firstNumber * secondNumber * thirdNumber;
 return fourthNumber;
-}
+} //end multiplyThree
 
+//multiplyThree tests
 console.log('Test - multiplyThree 2 * 3 * 4 =', multiplyThree(2,3,4));
 console.log('Test - multiplyThree 3 * -4 * 5 =', multiplyThree(3,-4,5));
 console.log('Test - multiplyThree -1 * -2 * 3 =', multiplyThree(-1,-2,3));
@@ -46,20 +47,25 @@ console.log('Test - multiplyThree -1 * -2 * 3 =', multiplyThree(-1,-2,3));
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
   }
-    return;
-}
+  else {
+    return false;
+  }
+} //end isPositive
+
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
+console.log( 'isPositive - should say true', isPositive(.005));
 
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
+  
 
 }
 
