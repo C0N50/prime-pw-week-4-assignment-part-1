@@ -136,8 +136,50 @@ function sumAll( ) {
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
+function positiveNumbersArray (inputArray) {
+  let newArray = [];
+  for (let value of inputArray) {
+    if (value > 0) {
+      newArray.push(value);
+    }
+  }
+  return newArray;
+}
+
+let testArray1 = [1, 3, -6, 5, 0, -8, 9];
+let testArray2 = [0, -1, -2, -8];
+
+console.log('Test positiveNumbersArray testArray1, new array is', positiveNumbersArray(testArray1), 'original array is', testArray1);
+console.log('Test positiveNumbersArray testArray2, new array is', positiveNumbersArray(testArray2), 'original array is', testArray2);
+
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+/* I chose the Problem Sum of Resistance Series in circuits https://edabit.com/challenge/JDkyQJqNfJNhvjmRW
+*/
+
+let seriesResistance1 = [1, 5, 6, 3] //"15 ohms"
+
+let seriesResistance2 = [16, 3.5, 6] // "25.5 ohms"
+
+let seriesResistance3 = [0.5, 0.5] // "1.0 ohm"
+
+function sumResistance (resistanceArray) {
+  let RT = 0;
+  for (let resister of resistanceArray) {
+    RT += resister;
+  }
+  if (RT > 1)
+  {
+    return RT + ' ohms';
+  }
+  else {
+    return RT + ' ohm';
+  }
+}
+
+console.log('Test sumeResistance1', sumResistance(seriesResistance1));
+console.log('Test sumeResistance1', sumResistance(seriesResistance2));
+console.log('Test sumeResistance1', sumResistance(seriesResistance3));
