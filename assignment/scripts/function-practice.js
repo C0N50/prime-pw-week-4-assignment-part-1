@@ -213,8 +213,10 @@ function sumResistance (resistanceArray) {
   else {
     return RT + ' ohm';
   }
-}
+} //end sumResistance
 
+
+//function tests
 console.log('#11: Test sumeResistance1', sumResistance(seriesResistance1));
 console.log('#11: Test sumeResistance1', sumResistance(seriesResistance2));
 console.log('#11: Test sumeResistance1', sumResistance(seriesResistance3));
