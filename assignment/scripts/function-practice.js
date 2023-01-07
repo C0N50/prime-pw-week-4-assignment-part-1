@@ -9,7 +9,8 @@ function hello() {
   return 'Hello World!';
 }
 // Call the function to test
-console.log('Test - should say "Hello World!"', hello());
+console.log('#1: Test - should say "Hello World!"', hello());
+console.log('\n' + '\n'); //space between.
 
 
 // 2. Function to return an personalized hello, using the `name` argument.
@@ -19,8 +20,9 @@ function helloName( name ) {
 } //End hellName
 
 // Remember to call the function to test
-console.log('Test -', helloName('Connor'));
-console.log(helloName('Ferris'));
+console.log('#2: Test -', helloName('Connor'));
+console.log('#2: ' + helloName('Ferris'));
+console.log('\n' + '\n'); //space between.
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
@@ -29,8 +31,9 @@ function addNumbers( firstNumber, secondNumber ) {
   return thirdNumber;
 } //end addNumbers
 
-console.log('Test - addNumbers 4 + 5 =', addNumbers(4,5));
-console.log('Test - addNumbers 35 + -90 =', addNumbers(35,-90));
+console.log('#3: Test - addNumbers 4 + 5 =', addNumbers(4,5));
+console.log('#3: Test - addNumbers 35 + -90 =', addNumbers(35,-90));
+console.log('\n' + '\n'); //space between.
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(firstNumber, secondNumber, thirdNumber){
@@ -39,9 +42,10 @@ return fourthNumber;
 } //end multiplyThree
 
 //multiplyThree tests
-console.log('Test - multiplyThree 2 * 3 * 4 =', multiplyThree(2,3,4));
-console.log('Test - multiplyThree 3 * -4 * 5 =', multiplyThree(3,-4,5));
-console.log('Test - multiplyThree -1 * -2 * 3 =', multiplyThree(-1,-2,3));
+console.log('#4: Test - multiplyThree 2 * 3 * 4 =', multiplyThree(2,3,4));
+console.log('#4: Test - multiplyThree 3 * -4 * 5 =', multiplyThree(3,-4,5));
+console.log('4: Test - multiplyThree -1 * -2 * 3 =', multiplyThree(-1,-2,3));
+console.log('\n' + '\n'); //space between.
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -56,11 +60,11 @@ function isPositive( number ) {
 
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-console.log( 'isPositive - should say true', isPositive(3) );
-console.log( 'isPositive - should say false', isPositive(0) );
-console.log( 'isPositive - should say false', isPositive(-3) );
-console.log( 'isPositive - should say true', isPositive(.005));
-
+console.log( '#5: isPositive - should say true', isPositive(3) );
+console.log( '#5: isPositive - should say false', isPositive(0) );
+console.log( '#5: isPositive - should say false', isPositive(-3) );
+console.log( '#5: isPositive - should say true', isPositive(.005));
+console.log('\n' + '\n'); //space between.
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
@@ -78,10 +82,10 @@ let firstName = ['Connor'];
 let names = ['Connor', 'Consolino', 'Ferris',]
 let noName = [];
 
-console.log('Test getLast should say Connor -', getLast(firstName));
-console.log('Test getLast should say Ferris -',  getLast(names));
-console.log('Test getLast should say undefined -', getLast(noName));
-
+console.log('#6: Test getLast should say Connor -', getLast(firstName));
+console.log('#6: Test getLast should say Ferris -',  getLast(names));
+console.log('#6: Test getLast should say undefined -', getLast(noName));
+console.log('\n' + '\n'); //space between.
 
 
 // 7. Function to find a value in an array. Return true if the 
@@ -104,15 +108,17 @@ function find( value, array ){
 } //end find
 
 //test cases
-console.log('Test find Connor find should say true -', find('Connor', firstName));
-console.log('Test find Connor find should say true -', find('Connor', names));
-console.log('Test find Consolino find should say true -', find('Consolino', names));
-console.log('Test find Ferris  find should say true -', find ('Ferris', names));
-console.log('Test find Connor find should say false -', find('Connor', noName));
-console.log('Test find Hank find should say false -', find('Hank', firstName));
-console.log('Test find Hank find should say false -', find('Hank', names));
-console.log('Test find Hank find should say false -', find('Hank', noName));
-console.log('Test find Marty find should say false -', find('Marty', names));
+console.log('#7: Test find Connor find should say true -', find('Connor', firstName));
+console.log('#7: Test find Connor find should say true -', find('Connor', names));
+console.log('#7: Test find Consolino find should say true -', find('Consolino', names));
+console.log('#7: Test find Ferris  find should say true -', find ('Ferris', names));
+console.log('#7: Test find Connor find should say false -', find('Connor', noName));
+console.log('#7: Test find Hank find should say false -', find('Hank', firstName));
+console.log('#7: Test find Hank find should say false -', find('Hank', names));
+console.log('#7: Test find Hank find should say false -', find('Hank', noName));
+console.log('#7: Test find Marty find should say false -', find('Marty', names));
+console.log('\n' + '\n'); //space between.
+
 
 // ----------------------
 // Stretch Goals
@@ -120,10 +126,25 @@ console.log('Test find Marty find should say false -', find('Marty', names));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  if(string) {
+    if(letter === string[0]) {
+      return true;
+      }
+    else{
+      return false;
+      }
+    }
+    else
+    {
+      return false
+    }
 }
-console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
-console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
+console.log( '#8: isFirstLetter - should say true', isFirstLetter('a', 'apple') );
+console.log( '#8: isFirstLetter - should say false', isFirstLetter('z', 'apple') );
+console.log( '#8: isFirstLetter - should say false', isFirstLetter('c', '') );
+console.log( '#8: isFirstLetter - should say false', isFirstLetter('', '') );
+console.log('\n' + '\n'); //space between.
+
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(array) {
@@ -136,8 +157,11 @@ function sumAll(array) {
 }
 
 let arr = [1,2,4,5];
+let arr2 = [-1,-2,3,4];
 
-console.log('sum all arr', sumAll(arr));
+console.log('#9: sum all arr should be 12', sumAll(arr));
+console.log('#9: sum all arr should be 4', sumAll(arr2));
+console.log('\n' + '\n'); //space between.
 
 
 // 10. Function to return a new array of all positive (greater than zero)
@@ -157,9 +181,9 @@ function positiveNumbersArray (inputArray) {
 let testArray1 = [1, 3, -6, 5, 0, -8, 9];
 let testArray2 = [0, -1, -2, -8];
 
-console.log('Test positiveNumbersArray testArray1, new array is', positiveNumbersArray(testArray1), 'original array is', testArray1);
-console.log('Test positiveNumbersArray testArray2, new array is', positiveNumbersArray(testArray2), 'original array is', testArray2);
-
+console.log('#10: Test positiveNumbersArray testArray1, new array is', positiveNumbersArray(testArray1), 'original array is', testArray1);
+console.log('#10: Test positiveNumbersArray testArray2, new array is', positiveNumbersArray(testArray2), 'original array is', testArray2);
+console.log('\n' + '\n'); //space between.
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
@@ -188,6 +212,6 @@ function sumResistance (resistanceArray) {
   }
 }
 
-console.log('Test sumeResistance1', sumResistance(seriesResistance1));
-console.log('Test sumeResistance1', sumResistance(seriesResistance2));
-console.log('Test sumeResistance1', sumResistance(seriesResistance3));
+console.log('#11: Test sumeResistance1', sumResistance(seriesResistance1));
+console.log('#11: Test sumeResistance1', sumResistance(seriesResistance2));
+console.log('#11: Test sumeResistance1', sumResistance(seriesResistance3));
