@@ -181,8 +181,11 @@ function positiveNumbersArray (inputArray) {
 let testArray1 = [1, 3, -6, 5, 0, -8, 9];
 let testArray2 = [0, -1, -2, -8];
 
-console.log('#10: Test positiveNumbersArray testArray1, new array is', positiveNumbersArray(testArray1), 'original array is', testArray1);
-console.log('#10: Test positiveNumbersArray testArray2, new array is', positiveNumbersArray(testArray2), 'original array is', testArray2);
+let newArray1 = positiveNumbersArray(testArray1);
+let newArray2 = positiveNumbersArray(testArray2);
+
+console.log('#10: Test positiveNumbersArray testArray1, new array is', newArray1, 'original array is', testArray1);
+console.log('#10: Test positiveNumbersArray testArray2, new array is', newArray2, 'original array is', testArray2);
 console.log('\n' + '\n'); //space between.
 
 
