@@ -31,6 +31,7 @@ function addNumbers( firstNumber, secondNumber ) {
   return thirdNumber;
 } //end addNumbers
 
+//addNumbers tests
 console.log('#3: Test - addNumbers 4 + 5 =', addNumbers(4,5));
 console.log('#3: Test - addNumbers 35 + -90 =', addNumbers(35,-90));
 console.log('\n' + '\n'); //space between.
@@ -44,7 +45,7 @@ return fourthNumber;
 //multiplyThree tests
 console.log('#4: Test - multiplyThree 2 * 3 * 4 =', multiplyThree(2,3,4));
 console.log('#4: Test - multiplyThree 3 * -4 * 5 =', multiplyThree(3,-4,5));
-console.log('4: Test - multiplyThree -1 * -2 * 3 =', multiplyThree(-1,-2,3));
+console.log('#4: Test - multiplyThree -1 * -2 * 3 =', multiplyThree(-1,-2,3));
 console.log('\n' + '\n'); //space between.
 
 // 5. Function that will return true if a number is positive, 
@@ -139,6 +140,8 @@ function isFirstLetter(letter, string) {
       return false
     }
 }
+
+//isFirstLetter test cases
 console.log( '#8: isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( '#8: isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 console.log( '#8: isFirstLetter - should say false', isFirstLetter('c', '') );
@@ -159,6 +162,7 @@ function sumAll(array) {
 let arr = [1,2,4,5];
 let arr2 = [-1,-2,3,4];
 
+//sumAll test cases
 console.log('#9: sum all arr should be 12', sumAll(arr));
 console.log('#9: sum all arr should be 4', sumAll(arr2));
 console.log('\n' + '\n'); //space between.
@@ -178,6 +182,8 @@ function positiveNumbersArray (inputArray) {
   return newArray;
 }
 
+
+//positiveNumbersArray test cases
 let testArray1 = [1, 3, -6, 5, 0, -8, 9];
 let testArray2 = [0, -1, -2, -8];
 
