@@ -9,14 +9,14 @@ function hello() {
   return 'Hello World!';
 }
 // Call the function to test
-console.log('#1: Test - should say "Hello World!"', hello());
+console.log('#1: Test - should say "Hello World!" \n#1:', hello());
 console.log('\n' + '\n'); //space between.
 
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return ('Hello ' + name + '!');
+  return ('Hello, ' + name + '!');
 } //End hellName
 
 // Remember to call the function to test
