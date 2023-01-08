@@ -102,10 +102,10 @@ function find( value, array ){
       }
     } //end for of
     return false; //return false if no values found.
-  } //end if get last
+  } //end if array not empty
   else {
   return false; //return false if array is empty
-  } //end else if getLast Fails
+  } //end else if array not empty Fails
 } //end find
 
 //test cases
